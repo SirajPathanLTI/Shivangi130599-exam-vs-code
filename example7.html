@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function showform(){
+            var x = document.getElementById("showform");
+            x.style.display="block";
+        }
+
+        function save(){
+            var emp = {
+                empno : document.getElementById("empno").value,
+                name : document.getElementById("name").value,
+                salary : document.getElementById("salary").value
+            }
+            console.log(emp);
+
+            var db = window.indexedDB.open("empdb", 2);
+            db.onupgradeneeded = function(evt) {
+                var conn = evt.currentTarget.result;
+                conn.createObjectStore("employees", {
+                    keyPath: "empno"
+                });
+            }
+            db.onsuccess = function(evt) {
+                var conn = evt.currentTarget.result;
+                var tx = conn.transaction("employees", "readwrite");
+                var store = tx.objectStore("employees");
+                var request = store.put(emp);
+                request.onsuccess = function(evt) {
+                    alert("record added sucessfully!");
+
+                }
+            }
+            return false;
+        }
+
+        function view(){
+            var db = window.indexedDB.open("empdb", 3);
+            db.onsuccess = function(evt){
+                var conn = evt.currentTarget.result;
+                var store = conn.transaction("employees").objectStore("employees");
+                var request= store.openCursor();
+                request.onsuccess = function(evt) {
+                    var cursor = evt.target.result;
+                    if(cursor){
+                        var emp = cursor.value;
+                        console.log(emp);
+                        //insted we might write ...innerHTML = emp.empno;
+                        cursor.continue();
+                    }
+                }
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showform()">Add An Employee</button>
+    <button>View All</button> 
+    <form style="display: none;" id="showform" onsubmit="return save()">
+        Empno : <input type="number" id="empno" /> <br />
+        Name : <input type="text" id="name" /> <br />
+        Salary : <input type="number" id="salary" /> <br />
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Login</title>
+
+    <style>
+        .maindiv {
+            width: 450px;
+            margin: auto;
+            border: 2px solid lightgray;
+            border-radius: 10px;
+            background-color: whitesmoke;
+        }
+
+        .account{
+            margin: auto;
+             width: 60%;
+             padding: 10px;
+            font-family: "Amazon Ember" Arial,sans-serif;
+        }
+        h1{
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        .name{
+            margin: 20px;
+            margin-bottom: 5px;
+        }
+
+        .number{
+            margin: 20px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .button {
+            color: orange;
+            text-align: center;         
+        }        
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <form>
+            <div class="account">
+                <h1>Create Account</h1>
+            </div>
+            <div class="name">
+                <label>Your Name</label>
+            </div>
+            <input type="text" />
+            
+            <div class="number">
+                <label>Mobile Number</label>
+               
+            </div>
+            <div class="option">
+                <select>
+                    <option>+91 India</option>
+                    <option>+1 USA</option>
+                    <option>-1 China</option>
+                    <input type="text" placeholder="Mobile Number"/>
+                </select>
+            </div>
+           
+            <div class="email">
+             <label>Email (Optional)</label>   
+            </div>
+            <input type="text" />
+
+            <div class="password">
+                <label>Password</label>
+            </div>
+            <input type="text" />
+
+            <div class="button"></div>
+           
+        </form>
+    </div>
+</body>
+</html>

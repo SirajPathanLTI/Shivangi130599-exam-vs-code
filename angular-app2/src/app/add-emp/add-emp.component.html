@@ -1,0 +1,56 @@
+<div class="centerdiv">
+    <form (ngSubmit) ="add()">
+        <div class="form-group">
+            <label for="name">Enter empno</label>
+      <input type="number" class="form-control" 
+      required
+    
+      name = "empno" #empno="ngModel" [(ngModel)]= "employee.empno" />
+      <!--<div [hidden]="empno.valid || (empno.pristine && empno.untouched)"></div>-->
+      <div *ngIf="empno.invalid && (empno.dirty || empno.touched)">
+        <div *ngIf="empno.errors.required" class="alert alert-danger">Empno is required</div>
+    </div>
+      <!--<div *ngIf="empno.sumitted && empno.invalid"></div>
+      <div *ngIf="empno.errors.required" class="alert alert-danger">Empno is required</div>-->
+        </div>
+        
+        <div class="form-group">
+            <label>Enter name</label>
+            <input type="text" class="form-control"
+            name="name" #em [(ngModel)]="employee.name" />
+         </div>
+        
+
+        <div class="form-group">
+            <label>Enter salary</label>
+      <input type="number" class="form-control" 
+             name = "salary"[(ngModel)]="employee.salary" />
+        </div>
+    
+        <div class="form-group">
+            <label>Enter Date Of Joining</label>
+      <input type="date" class="form-control" 
+             
+             name ="dateOfJoining"[(ngModel)]="employee.dateOfJoining" />
+        </div>
+    
+        
+        <div class="form-group">
+            <label>Enter department</label>
+      <select class="form-control" 
+             name ="department"[(ngModel)]="employee.department" >
+            <option value="IT">IT</option>
+             <option value="HR">HR</option>
+             <option value="Admin">Admin</option>
+             <option *ngForFor="let d be for department" value="{{d}}">{{d}}</option>
+             </select>
+        </div>
+        <style>
+            button {
+              background-color: orangered;
+              border: 1px solid #777;
+            }
+          </style>
+        <button type="submit" class="btn btn-success">Add</button>
+    </form>
+    </div>

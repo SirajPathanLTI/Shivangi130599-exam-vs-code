@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Progress</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <script>
+        function start() {
+        var timer = setInterval(update, 1000);
+
+        function update() {
+        var pb = document.getElementById("pb");
+        pb.value += 5;
+        document.getElementById("sp").innerText = pb.value + "% Completed";
+            if(pb.value == 100)
+            clearInterval(timer);            
+        }
+    }
+    </script>
+</head>
+<body>
+    <h1>Exploring HTML and its new feature</h1>
+    <button onclick="start()">Click Here</button> to see the progress...
+    <progress id="pb" max="100" value="40"></progress> <span id="sp"></span>
+</body>
+</html>

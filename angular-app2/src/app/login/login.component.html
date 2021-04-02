@@ -1,0 +1,6 @@
+<form (ngSubmit)= "login()">
+    Enter username : <input type="text" name="t1" [(ngModel)]=username /> <br />
+    Enter password : <input type="password" name="t2" [(ngModel)]=password /> <br />
+    <button type="submit">Login</button>
+    </form>
+    <div *ngIf="message">{{ message }}</div>

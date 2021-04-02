@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siraj Amazon</title>
+    <link rel="stylesheet" href="./styles/amazonRegistration.css" />
+</head>
+<body>
+    <div class="main">
+        <div>
+            <img src="./amazonin_logo.png">
+        </div>
+        <form class="regForm" onsubmit="">
+            <div><h1>Create Account</h1></div>
+            <div>
+                <label>Your Name</label>
+                <input type="text" placeholder="Your Name">
+            </div>
+            <div>
+                <label for="mobile_no">Mobile Number</label>
+                <select>
+                    <option>+91 India</option>
+                    <option>+1 US</option>
+                </select>
+                <input id="mobile_no" type="tel" placeholder="Your Number" style=" margin-left: .1em; width: 68%;">
+            </div>
+            <div>
+                <label for="email">Your Email(Optional)</label>
+                <input type="email" id="email" placeholder="Your Email">
+            </div>
+            <div>
+                <label>Password</label>
+                <input type="password" placeholder="At least 6 Characters">
+                <label>Passwords must be at least 6 characters. </label>
+            </div>
+            <div class="info">   
+                <p> We will send you a text to verify your phone. </p>   
+                <p> Message and Data rates may apply. </p>   
+            </div>
+            <div>      
+                <button type="submit">Continue</button>
+            </div>
+            <div>      
+                <label>Already have an Account? <a href="/">Sign in</a></label>
+                <label>Buying for work? <a href="/">Create Free Business Account</a></label>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

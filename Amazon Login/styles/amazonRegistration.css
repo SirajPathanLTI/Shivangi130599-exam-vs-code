@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+.main{
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1em;
+}
+img{
+    width: 12%;
+    margin-left: 43%;
+}
+
+form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid rgb(196, 194, 194);
+    border-radius: .2em;
+}
+
+div label{
+    display: block;
+    font-weight: 600;
+    margin: 0;
+    
+}
+
+div{
+    margin: .7em;
+}
+
+input{
+    padding: .4em;
+    width: 94%;
+    border-radius: .2em;
+    border: 1px solid rgb(153, 151, 151);
+    box-shadow: none;
+    border-radius: .1em;
+}
+
+select{
+    padding: .4em;
+    width: 25%;
+    border-radius: .3em;
+    background: rgb(245,245,245);
+    background: linear-gradient(90deg, rgba(245,245,245,1) 0%, rgba(230,230,229,0.8771708512506565) 60%, rgba(219,219,219,1) 100%); 
+}
+
+select:hover{
+    background: rgb(240,240,240);
+    background: linear-gradient(90deg, rgba(240,240,240,1) 0%, rgba(230,230,229,0.8771708512506565) 30%, rgba(219,219,219,1) 100%); 
+}
+
+button{
+    margin-left: 1.5em;
+    margin-top: 1em;
+    margin-right: auto;
+    align-items: center;
+    padding: .5em;
+    width: 90%;
+    border-radius: .3em;
+    border: 2px solid orange;
+    background: rgb(240,201,22);
+    background: linear-gradient(90deg, rgba(240,201,22,1) 0%, rgba(242,209,57,0.8771708512506565) 10%, rgba(226,198,85,1) 100%); 
+}
+
+label a{
+    font-weight: 400;
+}
+
+
+button:hover{
+
+    background: rgb(240,201,22);
+    background: linear-gradient(90deg, rgba(240,201,22,1) 0%, rgba(223,195,65,0.8771708512506565) 13%, rgba(245,189,75,1) 100%); 
+}
+
+.info{
+    line-height: 0.1em;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin: 1.5em 1em;
+}

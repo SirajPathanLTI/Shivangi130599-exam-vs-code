@@ -1,0 +1,19 @@
+.centerdiv {
+    width: 350px;
+    margin:auto;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+}
+
+button {
+    background-color: orange;
+    border: 1px solid #777
+}
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42a944;
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }

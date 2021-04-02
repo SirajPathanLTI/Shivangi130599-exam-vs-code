@@ -1,0 +1,36 @@
+<html>
+    <title>
+        Form
+    </title>
+    <body>
+        <h2>Again Exploring some of the new features of HTML5 </h2>
+        <!-- Tyring out new form elements-->
+        <form>
+            <label for="dob" >Date </label> : <input name="dob" type="date" /> <br />
+            Email : <input type="email" /> <br />
+            Name : <input type="text" autofocus /> <br />
+            Address : <input type="text" placeholder="Mumbai" /> <br />
+            Occupation : <input type="text" name="occupation" autocomplete="on" /> <br />
+            <button type="submit">Done</button>
+        </form>
+        <!--Quick look at the canves API-->
+        <canvas id="canvas" width="150" height="150"></canvas>
+        <script>
+            var canvas = document.getElementById("canvas");
+            var brush = canvas.getContext("2d");
+
+            brush.fillStyle = "green";
+            brush.fillRect(25, 25, 50, 50);
+            //brush.fillStyle = '#AACCDD';
+            brush.fillStyle = 'red';
+            brush.fillRect(80, 80, 50, 50);
+        </script>
+        <svg>
+            <rect x = "50" y ="50" width="100" height = "100"
+                fill = "blue" stroke = "red"/>
+            <circle cx = "100" cy = "100" r = "25"
+                fill = "yellow" stroke = "orange" />
+        </svg>
+
+    </body>
+</html>

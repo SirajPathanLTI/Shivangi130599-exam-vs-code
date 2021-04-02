@@ -1,0 +1,12 @@
+<!-- TODO: Only after i click on this button below, the products should appear on the page -->
+<button class="btn" (click)="show()">SHOW PRODUCTS</button>
+<div class="card" *ngFor="let p of products">
+    <img src="{{ p.imgUrl }}" alt="{{ p.name }}">
+    <h1>{{ p.name }}</h1>
+    <p class="price">{{ p.price | currency:'₹' }}</p>
+    <p>{{ p.description }}</p>
+    <p [hidden]="status.get(p.id)"><button (click)="addToCart(p.id)">Add To Cart</button></p>
+    <p [hidden]="!status.get(p.id)">Add to Cart Successful</p>
+    <!--<p [hidden]="p.inCart"><button (click)="addToCart(p.id)">Add To Cart</button></p>
+    <p [hidden]="!p.inCart">Add to Cart Successful</p>-->
+</div>

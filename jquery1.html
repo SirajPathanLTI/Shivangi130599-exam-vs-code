@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.0.js"></script>
+
+    <script>
+        //somewhat similar to main method in java
+        $(function(){ 
+            var header1 = $("h1");
+            header1.text("Welcome to jQuery");
+            //isn't it better than writing:
+            //document.getElementById/Name("h1").innerText = "Welcome";
+            var header2 = $("<h1 />");
+            header2.text("jQuery is very powerful");
+
+            header1.after(header2);
+        })
+    </script>
+
+</head>
+<body>
+<h1></h1>    
+</body>
+</html>
